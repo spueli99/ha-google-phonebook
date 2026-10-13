@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
+import contextlib
+import logging
 from dataclasses import dataclass
 from datetime import datetime
-import logging
 from typing import Any
 
 from homeassistant.core import HomeAssistant
@@ -64,10 +65,8 @@ class GooglePhonebookCoordinator(DataUpdateCoordinator[PhonebookData]):
 
         last_sync = None
         if raw.get("last_sync"):
-            try:
+            with contextlib.suppress(TypeError, ValueError):
                 last_sync = datetime.fromisoformat(raw["last_sync"])
-            except (TypeError, ValueError):
-                pass
 
         contacts = {
             str(number): str(name)
