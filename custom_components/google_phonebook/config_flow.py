@@ -4,10 +4,10 @@ from __future__ import annotations
 
 import logging
 import re
-from typing import Any, Mapping
+from collections.abc import Mapping
+from typing import Any
 
 import voluptuous as vol
-
 from homeassistant import config_entries
 from homeassistant.config_entries import SOURCE_REAUTH
 from homeassistant.data_entry_flow import FlowResult
