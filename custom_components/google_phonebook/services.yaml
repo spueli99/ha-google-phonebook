@@ -1,0 +1,68 @@
+lookup:
+  name: Rufnummer nachschlagen
+  description: Sucht eine Rufnummer im lokal synchronisierten Google-Telefonbuch.
+  fields:
+    phone_number:
+      name: Rufnummer
+      required: true
+      selector:
+        text:
+
+lookup_and_set:
+  name: Rufnummer nachschlagen und Helfer setzen
+  description: Schreibt E.164-Rufnummer und Kontaktname direkt in input_text-Helfer.
+  fields:
+    phone_number:
+      name: Rufnummer
+      required: true
+      selector:
+        text:
+    number_entity:
+      name: Rufnummer-Helfer
+      required: true
+      selector:
+        entity:
+          domain: input_text
+    name_entity:
+      name: Namens-Helfer
+      required: true
+      selector:
+        entity:
+          domain: input_text
+
+call_event:
+  name: Telefonereignis protokollieren
+  description: Verarbeitet ringing/calling/connected/idle für das persistente Call-Log.
+  fields:
+    event:
+      name: Ereignis
+      required: true
+      selector:
+        select:
+          options:
+            - ringing
+            - calling
+            - connected
+            - idle
+    remote:
+      name: Gegenstelle
+      selector:
+        text:
+    local:
+      name: Lokale SIP-Adresse
+      selector:
+        text:
+    active_user:
+      name: Eigene Rufnummer
+      selector:
+        text:
+    call_id:
+      name: Call-ID
+      selector:
+        text:
+
+mark_missed_seen:
+  name: Verpasste Anrufe als gesehen markieren
+
+clear_call_log:
+  name: Anrufprotokoll löschen

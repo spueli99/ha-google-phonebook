@@ -1,0 +1,17 @@
+{
+  "domain": "google_phonebook",
+  "name": "Google Phonebook",
+  "version": "0.5.1",
+  "config_flow": true,
+  "dependencies": [
+    "application_credentials"
+  ],
+  "iot_class": "cloud_polling",
+  "integration_type": "service",
+  "requirements": [],
+  "codeowners": [
+    "@spueli99"
+  ],
+  "documentation": "https://github.com/spueli99/ha-google-phonebook",
+  "issue_tracker": "https://github.com/spueli99/ha-google-phonebook/issues"
+}

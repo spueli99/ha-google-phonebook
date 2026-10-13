@@ -1,0 +1,31 @@
+{
+  "title": "Google Phonebook",
+  "config": {
+    "step": {
+      "reauth_confirm": {
+        "title": "Google Phonebook erneut verknüpfen",
+        "description": "Google muss erneut autorisiert werden."
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Google Phonebook Optionen",
+        "data": {
+          "country_code": "Standard-Ländervorwahl",
+          "call_log_max_entries": "Maximale Call-Log-Einträge",
+          "call_log_sensor_entries": "Davon als Sensorattribute veröffentlichen"
+        },
+        "data_description": {
+          "country_code": "Nur Ziffern, z. B. 49 für Deutschland.",
+          "call_log_max_entries": "Lokale persistente Historie.",
+          "call_log_sensor_entries": "0 deaktiviert die Liste im Sensor. Achtung: Sensorattribute können vom Recorder gespeichert werden."
+        }
+      }
+    }
+  },
+  "application_credentials": {
+    "description": "Aktiviere die Google People API und erstelle OAuth-Anmeldedaten vom Typ Webanwendung. Als Redirect-URI muss https://my.home-assistant.io/redirect/oauth eingetragen sein. [Google Cloud Console]({console_url})"
+  }
+}

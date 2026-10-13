@@ -1,0 +1,31 @@
+{
+  "title": "Google Phonebook",
+  "config": {
+    "step": {
+      "reauth_confirm": {
+        "title": "Reconnect Google Phonebook",
+        "description": "Google authorization must be renewed."
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Google Phonebook options",
+        "data": {
+          "country_code": "Default country calling code",
+          "call_log_max_entries": "Maximum call-log entries",
+          "call_log_sensor_entries": "Expose this many entries as sensor attributes"
+        },
+        "data_description": {
+          "country_code": "Digits only, for example 49 for Germany.",
+          "call_log_max_entries": "Persistent local call history.",
+          "call_log_sensor_entries": "0 disables the list attribute. Sensor attributes may be stored by Recorder."
+        }
+      }
+    }
+  },
+  "application_credentials": {
+    "description": "Enable the Google People API and create OAuth credentials of type Web application. Add https://my.home-assistant.io/redirect/oauth as redirect URI. [Google Cloud Console]({console_url})"
+  }
+}
