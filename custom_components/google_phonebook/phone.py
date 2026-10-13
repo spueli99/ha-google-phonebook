@@ -17,9 +17,7 @@ def extract_number_part(value: str | None) -> str:
     lower = raw.lower()
     if lower.startswith("sips:"):
         raw = raw[5:]
-    elif lower.startswith("sip:"):
-        raw = raw[4:]
-    elif lower.startswith("tel:"):
+    elif lower.startswith("sip:") or lower.startswith("tel:"):
         raw = raw[4:]
 
     raw = raw.split("@", 1)[0]
