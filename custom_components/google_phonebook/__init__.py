@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import voluptuous as vol
-
 from homeassistant.config_entries import ConfigEntry, ConfigEntryState
 from homeassistant.core import HomeAssistant, ServiceCall, SupportsResponse
 from homeassistant.helpers import config_entry_oauth2_flow
