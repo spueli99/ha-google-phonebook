@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.2
+
+- Fixed Ruff lint findings in import ordering and modernized standard-library imports.
+- Simplified SIP/TEL URI parsing without changing normalization behavior.
+- Replaced a no-op exception handler with `contextlib.suppress`.
+- No storage schema or configuration changes.
+
 ## 0.5.1
 
 - Added GitHub maintainer metadata for @spueli99, documentation and issue-tracker URLs.
