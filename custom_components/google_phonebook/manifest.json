@@ -1,7 +1,7 @@
 {
   "domain": "google_phonebook",
   "name": "Google Phonebook",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "config_flow": true,
   "dependencies": [
     "application_credentials"
